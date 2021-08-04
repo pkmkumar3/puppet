@@ -6,7 +6,7 @@ package {'httpd package':
   
 } 
 
- $http.conf = '<IfModule prefork.c>
+ $http_conf = '<IfModule prefork.c>
                StartServers        4
                MinSpareServers     20
                MaxSpareServers     40
@@ -15,7 +15,7 @@ package {'httpd package':
                </IfModule>'
 file { '/etc/httpd/conf/httpd.conf':
   ensure  => present,
-  content => $http.conf,
+  content => $http_conf,
 }
 
 $vhost = '<VirtualHost *:80>
