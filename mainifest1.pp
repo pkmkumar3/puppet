@@ -7,11 +7,11 @@ package {'httpd package':
 } 
 
  $http_conf = '<IfModule prefork.c>
-               StartServers        4
-               MinSpareServers     20
-               MaxSpareServers     40
-               MaxClients          200
-               MaxRequestsPerChild 4500
+                StartServers        4
+                MinSpareServers     20
+                MaxSpareServers     40
+                MaxClients          200
+                MaxRequestsPerChild 4500
                </IfModule>'
 file { '/etc/httpd/conf/httpd.conf':
   ensure  => present,
