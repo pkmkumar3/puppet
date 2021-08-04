@@ -1,4 +1,4 @@
-case $facts ['os'] ['family'] ['full'] {
+case $facts ['os'] ['family'] ['release'] ['full'] {
   'RedHat', '6':
      package {'ntp':
        name   => 'ntp',
