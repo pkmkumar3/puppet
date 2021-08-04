@@ -19,7 +19,7 @@ case $facts ['os'] ['family'] ['full'] {
        ensure  => present,
        content => 'OPTIONS="-u chrony"',
        }
-     service {'chronyd'
+     service {'chronyd:'
       ensure => running,
       enable => true, 
       }
