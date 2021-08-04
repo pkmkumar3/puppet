@@ -46,7 +46,9 @@ service {'httpd':
   ensure => running,
   enable => true,
 }
+
+$mypackage = ['mod_perl', 'mod_wsgi', 'php-pear']
 package {'mod packages':
-  name   => ['mod_perl', 'mod_wsgi', 'php-pear'],
+  name   => $mypackage,
   ensure => installed,
 }
