@@ -3,8 +3,7 @@ class apache {
 package {'httpd package':
   name   => 'httpd',
   ensure => installed,
-  
-} 
+  } 
 
  $http_conf = '<IfModule prefork.c>
                 StartServers        4
