@@ -47,8 +47,9 @@ service {'httpd':
   enable => true,
 }
 
-$mypackage = ['mod_perl', 'mod_wsgi', 'php-pear']
-package {'mod packages':
-  name   => $mypackage,
-  ensure => installed,
+['mod_perl', 'mod_wsgi', 'mod_php', 'mod_php-pear'].each |String $mod_package| {
+  package{"Install package ${mod_package}":
+    name   => $mod_package,
+    ensure => installed,
+  }
 }
