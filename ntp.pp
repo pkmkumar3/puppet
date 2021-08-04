@@ -1,5 +1,7 @@
-case $facts ['os'] ['family'] ['release'] ['full'] {
-  'RedHat', '6':
+case $facts ['os'] ['family'] {
+  'RedHat':
+     case $facts ['os'] ['release'] ['major'] {
+       '6':
      package {'ntp':
        name   => 'ntp',
        ensure => installed,
@@ -11,7 +13,9 @@ case $facts ['os'] ['family'] ['release'] ['full'] {
      service {'ntpd'
       ensure => running,
       enable => true,
-  'RedHat', '7':
+      }
+     }
+       '7':
      package {'chrony':
        name   => 'chrony',
        ensure => installed,
@@ -23,4 +27,5 @@ case $facts ['os'] ['family'] ['release'] ['full'] {
       ensure => running,
       enable => true, 
       }
-       
+     }
+    }
