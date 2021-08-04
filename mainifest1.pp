@@ -1,7 +1,7 @@
 class apache {
 
 package {'httpd package':
-  name   => httpd,
+  name   => 'httpd',
   ensure => installed,
   
 } 
