@@ -28,7 +28,7 @@ class appx {
         
        }
        
-       common.yaml
+       data/common.yaml
        appx::config_file:mypackage: appx
        appx::config_file:ensure: 1.0
        appx::service::service: appx
