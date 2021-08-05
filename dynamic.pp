@@ -23,7 +23,7 @@ Many manifested static module"
       }
     file {'/etc/init.d/appX':
       ensure => present,
-      content => 'puppet:///module/appx/files/abc.txt',
+      content => 'puppet:///module/appx/abc.txt',
       }
       
     -----
