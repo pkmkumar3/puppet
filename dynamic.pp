@@ -9,7 +9,8 @@ class appx {
   
   class appx::config_file (
   String $mypackage,
-  String $ensure,){
+  String $ensure,
+  ) {
     package {'$mypackage':
       name => '$mypackage',
       ensure => $ensure,
@@ -23,7 +24,8 @@ class appx {
     service.pp
     class appx::service (
     String $service,
-    String $ensure,) {
+    String $ensure,
+    ) {
       service {'$service':
         ensure => $ensure,
         enable => true,
