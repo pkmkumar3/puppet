@@ -5,6 +5,12 @@ class appx {
   }
   
   ---
+  module/appx/files/abc.txt
+  "Single manifested static module without files/templates
+Single manifested static module with files
+Single manifested static module with templates *****************
+Many manifested static module"
+----------
   conifg_file
   
   class appx::config_file (
