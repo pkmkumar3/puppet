@@ -7,7 +7,8 @@ class appx {
   ---
   conifg_file
   
-  class appx::config_file (String $mypackage,
+  class appx::config_file (
+  String $mypackage,
   String $ensure,){
     package {'$mypackage':
       name => '$mypackage',
@@ -20,7 +21,8 @@ class appx {
       
     -----
     service.pp
-    class appx::service (String $service,
+    class appx::service (
+    String $service,
     String $ensure,) {
       service {'$service':
         ensure => $ensure,
