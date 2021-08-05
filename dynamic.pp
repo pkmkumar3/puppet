@@ -14,12 +14,12 @@ Many manifested static module"
   conifg_file
   
   class appx::config_file (
-  String $mypackage,
-  String $ensure,
+    String $mypackage,
+    String $ensure1,
   ) {
     package {'$mypackage':
-      name => '$mypackage',
-      ensure => $ensure,
+      name => $mypackage,
+      ensure => $ensure1,
       }
     file {'/etc/init.d/appX':
       ensure => present,
@@ -29,17 +29,17 @@ Many manifested static module"
     -----
     service.pp
     class appx::service (
-    String $service,
-    String $ensure,
+      String $service1,
+      String $ensure2,
     ) {
       service {'$service':
-        ensure => $ensure,
+        ensure => $ensure2,
         enable => true,
         
        }
        
        data/common.yaml
        appx::config_file:mypackage: appx
-       appx::config_file:ensure: 1.0
-       appx::service::service: appx
-       appx::service::ensure: on
+       appx::config_file:ensure1: 1.0
+       appx::service::service1: appx
+       appx::service::ensure2: on
