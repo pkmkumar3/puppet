@@ -1,7 +1,7 @@
 init.pp -->
 class appx {
-  contain appx1::config_file
-  contain appx1::service
+  contain appx::config_file
+  contain appx::service
   }
   
   ---
