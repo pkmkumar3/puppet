@@ -19,7 +19,7 @@ class appx {
       }
       
     -----
-    server.pp
+    service.pp
     class appx::service ($String $service
     $String $ensure) {
       service {'$service':
